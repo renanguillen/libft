@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 20:47:14 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/25 15:40:17 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:36:31 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 static int	ft_count_words(const char *s, char c)
 {
-	int	count;
-	int	validator;
+	int	words;
+	int	is_word;
 	int	i;
 
-	count = 0;
-	validator = 1;
+	words = 0;
+	is_word = 1;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c && validator)
+		if (s[i] != c && is_word)
 		{
-			validator = 0;
-			count++;
+			is_word = 0;
+			words++;
 		}
-		else if (s[i++] == c)
-			validator = 1;
+		else if (s[i] == c)
+			is_word = 1;
+		i++;
 	}
-	return (count);
+	return (words);
 }
 
 void	ft_allocate(char **ans, int word, char c, char *aux)
@@ -62,18 +63,15 @@ void	ft_allocate(char **ans, int word, char c, char *aux)
 char	**ft_split(char const *s, char c)
 {
 	char	**ans;
-	char	*aux;
 	int		word;
 
-	aux = ft_strtrim(s, &c);
-	if (!aux && aux[0] == 0)
+	if (!s && s[0] == 0)
 		return (NULL);
 	word = ft_count_words(s, c);
 	ans = (char **)malloc(sizeof(char *) * (word + 1));
 	if (!ans)
 		return (NULL);
-	ft_allocate(ans, word, c, aux);
+	ft_allocate(ans, word, c, (char *)s);
 	ans[word] = NULL;
-	free(aux);
 	return (ans);
 }
