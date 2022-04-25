@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 20:47:14 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/25 01:01:26 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 15:40:17 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-void	ft_wtfunction(char **ans, int word, char c, char *aux)
+void	ft_allocate(char **ans, int word, char c, char *aux)
 {
 	int	i;
 	int	j;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	ans = (char **)malloc(sizeof(char *) * (word + 1));
 	if (!ans)
 		return (NULL);
-	ft_wtfunction(ans, word, c, aux);
+	ft_allocate(ans, word, c, aux);
 	ans[word] = NULL;
 	free(aux);
 	return (ans);
