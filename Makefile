@@ -5,6 +5,8 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strmapi.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c \
 	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 OBJS = $(SRCS:.c=.o)
+BSRCS = ft_lstnew.c 
+BOBJS = $(BSRCS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
@@ -13,28 +15,22 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
-	
+
 $(OBJS): $(SRCS)
 	cc $(FLAGS) -I . -c $(SRCS)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
 
-test: all
-	@clear
-	cc $(FLAGS) -lbsd -I . -o test ../appendix_libft/test.c $(NAME)
-	@echo Execution:
-	@echo
-	@./test
+bonus: $(BOBJS)
+	ar rc $(NAME) $(BOBJS)
 
-
-tclean: fclean
-	@rm -rf test
-	@clear
+$(BOBJS): $(BSRCS)
+	cc $(FLAGS) -I . -c $(BSRCS)
 
 .PHONY: re fclean clean all test tclean
