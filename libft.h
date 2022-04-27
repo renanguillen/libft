@@ -6,13 +6,12 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 22:38:59 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/27 23:26:09 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/27 23:49:54 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 

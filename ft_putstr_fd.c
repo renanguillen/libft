@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 21:40:32 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/26 20:18:11 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/27 23:50:35 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, strlen(s));
+	write(fd, s, ft_strlen(s));
 }
