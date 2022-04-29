@@ -34,4 +34,4 @@ bonus: $(BOBJS)
 $(BOBJS): $(BSRCS)
 	cc $(FLAGS) -I . -c $(BSRCS)
 
-.PHONY: re fclean clean all test tclean
+.PHONY: re fclean clean all

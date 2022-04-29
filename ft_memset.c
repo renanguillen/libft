@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 22:13:04 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/07 22:29:13 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/29 02:19:33 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*aux;
-	size_t	i;
 
-	i = 0;
 	aux = (char *)s;
 	while (n > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:45:27 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/20 17:16:35 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/29 02:28:12 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	aux = (unsigned char *)s;
 	while (i < n)
 	{
-		if (*aux == (unsigned char )c)
+		if (*aux == (unsigned char)c)
 			return (aux);
 		i++;
 		aux++;
