@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 20:47:14 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/25 16:36:31 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/30 23:54:44 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_count_words(const char *s, char c)
 	return (words);
 }
 
-void	ft_allocate(char **ans, int word, char c, char *aux)
+static void	ft_allocate(char **ans, int word, char c, char *aux)
 {
 	int	i;
 	int	j;

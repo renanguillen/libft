@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 21:44:48 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/04/26 00:17:25 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/04/30 23:55:40 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_get_len(int n)
 	return (len);
 }
 
-char	*ft_exceptions(int n)
+static char	*ft_exceptions(int n)
 {
 	char	*max;
 	char	*ret;
