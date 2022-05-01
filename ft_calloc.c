@@ -17,14 +17,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ans;
 	size_t	total;
 
-	if (nmemb > 2147483647 || size > 2147483647)
-		return (NULL);
 	total = nmemb * size;
 	if (total > 2147483647)
+		return (NULL);
+	if (size > __SIZE_MAX__ / nmemb)
 		return (NULL);
 	ans = malloc(total);
 	if (!ans)
 		return (NULL);
-	ft_bzero(ans, nmemb * size);
-	return (ans);
+	ft_bzero(ans, total);
+	return ((void *)ans);
 }
