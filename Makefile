@@ -18,7 +18,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	cc $(FLAGS) -I . -c $(SRCS)
+	cc $(FLAGS) -c $(SRCS)
 
 clean:
 	rm -rf $(OBJS) $(BOBJS)
@@ -32,6 +32,6 @@ bonus: $(BOBJS)
 	ar rc $(NAME) $(BOBJS)
 
 $(BOBJS): $(BSRCS)
-	cc $(FLAGS) -I . -c $(BSRCS)
+	cc $(FLAGS) -c $(BSRCS)
 
 .PHONY: re fclean clean all
